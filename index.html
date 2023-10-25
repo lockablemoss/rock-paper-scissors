@@ -1,0 +1,28 @@
+<script>
+
+  function getComputerChoice () {
+    let random = Math.floor(Math.random() * 3);
+    let choices = ["rock", "paper", "scissors"];
+    return choices[random]
+  }
+
+  let playerSelection = "rock"
+  let computerSelection = getComputerChoice();
+
+  function playRound(playerSelection, computerSelection) {
+    if (playerSelection.toUpperCase() == "ROCK" && computerSelection() == "paper") {
+      return string("You Lose! Computer Chose Rock.")
+    }
+    else if (playerSelection.toUpperCase() == "PAPER" && computerSelection() == "scissors") {
+      return string("You Lose! Computer Chose Scissors.")
+    }
+    else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection() == "rock") {
+      return string("You Lose! Computer Chose Rock.")
+    }
+    else {
+      return string("You Win! Computer Chose " + computerSelection)
+    }
+  }
+
+  console.log(playRound(playerSelection, computerSelection));
+</script>
