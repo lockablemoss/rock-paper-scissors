@@ -9,18 +9,27 @@
   let playerSelection = "rock"
   let computerSelection = getComputerChoice();
 
+  let string1 = "You Lose! Computer Chose Rock."
+  let string2 = "You Lose! Computer Chose Scissors."
+  let string3 = "You Lose! Computer Chose Rock."
+  let string4 = "You Win! Computer Chose " + computerSelection  + "."
+  let string5 = "Tie! You Both Chose " + computerSelection + "."
+
   function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toUpperCase() == "ROCK" && computerSelection() == "paper") {
-      return string("You Lose! Computer Chose Rock.")
+    if (playerSelection.toUpperCase() == "ROCK" && computerSelection == "paper") {
+      return string1
     }
     else if (playerSelection.toUpperCase() == "PAPER" && computerSelection() == "scissors") {
-      return string("You Lose! Computer Chose Scissors.")
+      return string2
     }
     else if (playerSelection.toUpperCase() == "SCISSORS" && computerSelection() == "rock") {
-      return string("You Lose! Computer Chose Rock.")
+      return string3
+    }
+    else if (playerSelection.toUpperCase() == computerSelection.toUpperCase()) {
+      return string4
     }
     else {
-      return string("You Win! Computer Chose " + computerSelection)
+      return string5
     }
   }
 
